@@ -11,11 +11,11 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  puts text
-  text.match(/\b[A-Z]\w*[?,;:'".]/) ? true : text.match(/\b[a-z]\w*[?,;:'".]/) ? false : text.match(/\b[A-Z]\w[^?,;:'".]/) ? false : text.match(/\b[a-z]\w*[^?,;:'".]/) ? false : false
-
+  text.match(/^[A-Z].+[!?\.]$/) ? true : false
 end
 
 def valid_phone_number?(phone)
-
+  puts phone
+  #puts phone.match(/(\d{3})([\s-./)]?)(\d{3})([\s-./]?)(\d{4})/) ? true : false
+  phone.match(/((\(\d{3}\)?)|(\d{3}))([\s\-.\/]?)(\d{3})([\s\-.\/]?)(\d{4})/) ? true : false
 end
